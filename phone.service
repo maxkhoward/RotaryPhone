@@ -1,0 +1,14 @@
+[Unit]
+Description=Phone Service
+After=multi-user.target
+
+[Service]
+User=max.howard
+Type=simple
+WorkingDirectory=/home/max.howard/phone
+ExecStart=python /home/max.howard/phone/main.py
+KillSignal=SIGINT
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
